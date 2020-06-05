@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "outDir": "src/main/resources/static/dist/",
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": "src/main/resources/static",
+    "types": [],
+    "paths": {
+      "@/*": [
+        "js/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
+  },
+  "include": [
+    "src/main/resources/static/**/*.ts",
+    "src/main/resources/static/**/*.tsx",
+    "src/main/resources/static/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
