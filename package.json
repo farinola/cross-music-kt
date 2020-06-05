@@ -2,11 +2,10 @@
   "name": "cross-music",
   "version": "1.0.0",
   "description": "Share music across different platforms",
-  "main": "src/main/resources/static/index.ts",
   "repository": "git@github.com:farinola/cross-music.git",
   "author": "farinola <fp.arinola@gmail.com>",
   "license": "MIT",
-  "private": false,
+  "private": true,
   "dependencies": {
     "autoprefixer": "^9.8.0",
     "tailwindcss": "^1.4.6",
