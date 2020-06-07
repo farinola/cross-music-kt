@@ -1,8 +1,10 @@
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const path = require('path');
 
 module.exports = {
     entry: './src/main/resources/static/index.ts',
-    mode: 'development',
+    mode: process.env.development ? 'development' : 'production',
+    devtool: process.env.development ? "inline-source-map" : false,
     module: {
         rules: [
             {
@@ -20,6 +22,9 @@ module.exports = {
             }
         ],
     },
+    plugins: [
+        new CleanWebpackPlugin(),
+    ],
     resolve: {
         extensions: [ '.tsx', '.ts', '.js', '.css' ],
     },
