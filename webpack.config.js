@@ -5,6 +5,10 @@ module.exports = {
     entry: './src/main/resources/static/index.ts',
     mode: process.env.development ? 'development' : 'production',
     devtool: process.env.development ? "inline-source-map" : false,
+    devServer: {
+        contentBase: './src/main/resources/',
+        port: 8080
+    },
     module: {
         rules: [
             {
@@ -23,10 +27,10 @@ module.exports = {
         ],
     },
     plugins: [
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     ],
     resolve: {
-        extensions: [ '.tsx', '.ts', '.js', '.css' ],
+        extensions: [ '.tsx', '.ts', '.js'],
     },
     output: {
         filename: 'bundle.js',

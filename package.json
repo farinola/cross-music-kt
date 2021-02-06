@@ -10,9 +10,10 @@
   "scripts": {
     "start": "webpack",
     "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules",
-    "watch": "yarn dev -- --watch",
-    "watch-poll": "yarn watch -- --watch-poll",
-    "prod": "cross-env NODE_ENV=production webpack --no-progress --hide-modules"
+    "watch": "yarn dev --watch",
+    "watch-poll": "yarn watch --watch-poll",
+    "prod": "cross-env NODE_ENV=production webpack --no-progress --hide-modules",
+    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot"
   },
   "dependencies": {
     "autoprefixer": "^9.8.0",
@@ -28,6 +29,7 @@
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.5",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
   }
 }
